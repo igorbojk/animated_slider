@@ -1,0 +1,197 @@
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*end reset*/
+
+@font-face {
+font-family: 'Myriad Pro Regular';
+src: url('../fonts/MyriadPro-Regular.eot');
+src: url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+url('../fonts/MyriadPro-Regular.woff') format('woff'),
+url('../fonts/MyriadPro-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+body{
+	font-family: "Myriad Pro Regular";
+}
+.wrap{
+	background: rgb(26,180,177);
+	height: 100vh;
+	display: flex;
+	overflow: hidden;
+}
+
+.slider-container{
+	margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    align-items: center;
+}
+
+
+.slider-button{
+	width: 153px;
+	height: 68px;
+	position: relative;
+	display: flex;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+}
+
+.slider-button:before{
+	content: '';
+	background-image: url('../img/btn-bg.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.slider-button.next:before{
+	transform: rotate(180deg);
+}
+
+.slider-button:hover:before{
+	background-image: url('../img/btn-bg-hover.png');
+}
+
+.slider-button:hover{
+	color: rgb(26,180,177);
+}
+
+
+.slider-button span{
+	position: relative;
+	margin: auto;
+}
+
+.slider{
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.slider.slide-left-out{
+	right: 95px !important;
+}
+
+.slider.slide-right-in{
+	right: 191px !important;
+}
+.slider.end-left-anim{
+	transition: right .3s;
+	right: 0;
+}
+.slider.end-right-anim{
+	transition: left .3s;
+	left: 0;
+}
+
+.slider.slide-right-out{
+	left: 96px !important;
+}
+
+.slider.slide-left-in{
+	left: 191px !important;
+}
+
+.slide{
+	width: 143px;
+	height: 143px;
+	box-sizing: border-box;
+	border: solid 5px rgba(255,255,255,0.7);
+	border-radius: 50%;
+	margin: 0 24px;
+	position: relative;
+  
+    transform: scale(1);
+    opacity: 1;
+    transition: transform .3s, opacity .5s;
+}
+.slide:hover{
+	box-shadow: 0px 1px 16px rgba(0,0,0,0.5);
+	border-color: white;
+}
+.slide:hover .slide-person{
+	top: -24px;
+}
+.slide-person{
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: -16px;
+}
+.slide-person.pers_1{
+	background-image: url('../img/pers_1.png');
+}
+.slide-person.pers_2{
+	background-image: url('../img/pers_2.png');
+}
+
+.slideOutRight{
+	position: absolute;
+	right: -195px;
+    opacity: 0;
+    transform: scale(2) translate(100px);
+}
+.slideOutLeft{
+	position: absolute;
+	left: -195px;
+    opacity: 0;
+    transform: scale(2) translate(-100px);
+}
