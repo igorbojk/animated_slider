@@ -62,7 +62,3 @@ buttonRight.addEventListener( "click" , function() {
     generateElem();
     nexSlide();
 });
-
-function deleteGenerateELem(){
-    elem = null;
-}
