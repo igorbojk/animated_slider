@@ -1,5 +1,5 @@
-#Slider 
+# Slider 
 Animated Slider on CSS and javaScript
 
-#DEMO
+# DEMO
 You can see DEMO on http://igorbojk.kl.com.ua/slider/
