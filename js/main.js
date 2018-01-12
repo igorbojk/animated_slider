@@ -5,7 +5,7 @@ var slider = document.getElementsByClassName('slider')[0];
 
 var elem;
 
-function nexSlide(){
+function nextSlide(){
     slider.classList.add('slide-right-out')
     slider.children[0].classList.add('slideOutLeft');
     elem.classList.add('slideOutRight');
@@ -60,5 +60,5 @@ buttonLeft.addEventListener( "click" , function() {
 });
 buttonRight.addEventListener( "click" , function() {
     generateElem();
-    nexSlide();
+    nextSlide();
 });
